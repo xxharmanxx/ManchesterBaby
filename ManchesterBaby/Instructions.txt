@@ -1,0 +1,39 @@
+									Option 1: Using Makefile
+
+Using Makefile
+
+Open a Terminal: Launch a terminal window and navigate to project's directory where the Makefile is located.
+
+Compile the Project: In the terminal, compile project by entering the command:
+
+"make"
+
+This will use the Makefile to compile your project. The output of this process is typically an executable file. Based on the information provided, the default name for this executable will be "a.out".
+
+Run the Executable: To execute your program, type the following command in the terminal:
+
+
+"./a.out"
+
+This will run the compiled program, and you should see the output in the terminal window.
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+								
+									Option 2: Manual Compilation with g++
+Usng the g++ command.
+
+Open a Terminal: Launch a terminal window and navigate to the directory containing your source files (.cpp and .h files).
+
+Compile the Project: In the terminal, compile your project manually by entering the command:
+
+"g++ -o baby_simulator Baby.cpp Assembler.cpp baby_test.cpp Display.cpp -I."
+
+This command tells g++ to compile the specified .cpp files and link them into an executable named baby_simulator. The -I. option instructs the compiler to include the current directory in the search path for header files.
+
+Run the Executable: After compilation, run program with the command:
+
+
+"/baby_simulator"
+
+This executes the baby_simulator executable, and you should see your program's output in the terminal window.

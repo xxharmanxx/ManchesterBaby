@@ -1,0 +1,78 @@
+											Introduction
+
+********************************************************************************************************************************************************************************************
+
+The Manchester Baby, formally known as the Small-Scale Experimental Machine (SSEM), represents a cornerstone in the history of computing. Developed in 1948 at the University of Manchester, it was the world's first stored-program computer, laying the groundwork for modern computing paradigms. The objective of this project was to design and implement a software simulation of the Manchester Baby, alongside an assembler to translate assembly language into the Baby's machine code. This endeavor aimed not only to recreate the historical functionalities of the Baby but also to offer educational insights into the fundamentals of computer operations and assembly language programming.
+
+********************************************************************************************************************************************************************************************
+
+											Methodology
+
+The project was divided into two main components: the Baby Simulator (Baby.cpp, Baby.h) and the Assembler (Assembler.cpp, Assembler.h). Additionally, utility files like Display.h and baby_test.cpp were developed to facilitate testing and visualization.
+
+1. Baby Simulator Development
+The simulator's development focused on accurately modeling the Baby's hardware capabilities within a software environment. This required a deep dive into historical documents to understand the Baby's operation, including its instruction set, memory organization, and execution cycle. Key features implemented include:
+
+Memory Store: Represented as a vector of 32-bit bitsets, mirroring the Baby's 32 lines of memory.
+Fetch-Decode-Execute Cycle: Core to the simulation, this cycle fetches an instruction from memory, decodes the operation, and executes it, altering the machine state as necessary.
+Instruction Set: Emulation of the original seven instructions (JMP, JRP, LDN, STO, SUB, CMP, STOP) using method pointers for modular and extensible design.
+
+2. Assembler Development
+The assembler translates assembly instructions into binary code, focusing on usability and flexibility. It incorporates a symbol table for variable and label management, allowing users to write more understandable code. Key functionalities include:
+
+Assembly Parsing: Analysis of each line of assembly code to identify instructions and operands.
+Symbol Management: Handling of labels and variables, enabling the use of meaningful names instead of direct memory addresses.
+Binary Code Generation: Conversion of parsed assembly instructions into binary format, ready for execution by the simulator.
+
+********************************************************************************************************************************************************************************************
+
+										Challenges and Solutions
+
+1. Accurate Simulation:
+
+Recreating the functionality of a historical machine with modern programming tools posed challenges, especially in accurately simulating the hardware constraints and operation semantics. Extensive research and iterative testing were crucial in overcoming this, ensuring the simulator reflected the original Manchester Baby's behavior.
+
+2. Assembly Language Parsing:
+
+The diverse syntax and semantics of assembly language required robust parsing strategies. Implementing a flexible parser that could accurately translate symbolic instructions into binary while managing labels and variables was achieved through regular expressions and state management techniques.
+
+********************************************************************************************************************************************************************************************
+
+										Results and Discussion
+
+The successful development of the Manchester Baby simulator and assembler represents a significant achievement in both educational and historical preservation aspects. Users can write assembly programs, assemble them into binary code, and run them on the simulator, experiencing firsthand the pioneering computing model of the Manchester Baby. This project not only aids in understanding the evolution of computer technology but also serves as a tribute to the original inventors' ingenuity.
+
+The software simulator offers a window into the past, allowing users to grasp the fundamental concepts of programming and machine operation that underpin modern computing. Meanwhile, the assembler bridges the gap between historical hardware limitations and contemporary programming practices, making the project accessible to users without deep technical knowledge of early computing machinery.
+
+********************************************************************************************************************************************************************************************
+
+										   Conclusion
+
+This project successfully achieved its goal of developing a software simulation of the Manchester Baby, alongside an assembler for translating assembly language into machine code. Through this process, it provided valuable insights into the early days of computing, illustrating the principles of stored-program computers and assembly language programming. The challenges encountered during development underscored the importance of accurate simulation and effective parsing strategies, ultimately leading to a comprehensive understanding of the Manchester Baby's historical significance and operation.
+
+By meticulously following the original design and specifications of the Manchester Baby, the project not only serves as a tribute to a pioneering achievement in computing but also as an educational tool, offering hands-on experience with fundamental computing concepts.
+
+********************************************************************************************************************************************************************************************
+
+										   Future Work
+
+Future enhancements could include expanding the simulator to support more complex instruction sets, developing a graphical user interface for easier interaction, and incorporating more detailed simulations of hardware components. Additionally, extending the assembler to support more features of modern assembly languages could further bridge the gap between historical and contemporary computing practices.
+
+********************************************************************************************************************************************************************************************
+
+										  Acknowledgments
+
+Special thanks are due to the original creators of the Manchester Baby for their pioneering work and to the educators, historians, and computing professionals who have preserved and shared this valuable history. This project stands on the shoulders of giants, and it is hoped that it contributes meaningfully to the ongoing story of computer science education and appreciation.
+
+
+********************************************************************************************************************************************************************************************
+
+										   References
+
+Napper, R. B. E. (2000). The Manchester Baby: The Development of the Stored-Program Concept. In IEEE Annals of the History of Computing, vol. 22, no. 2, pp. 7-13.
+Lavington, S. (1998). A History of Manchester Computers. The British Computer Society.
+Enticknap, N. (1998). Computing's Golden Jubilee. In Resurrection, The Journal of the Computer Conservation Society, issue 20, Summer 1998.
+This project not only underscores the importance of understanding historical computing machines like the Manchester Baby but also demonstrates the educational potential of simulating such systems. Through meticulous research, programming, and testing, the team has delivered a tool that brings to life a seminal moment in the history of computing, offering users an immersive experience of operating the world's first stored-program computer. As we move forward, it remains essential to remember and celebrate these milestones, ensuring that the lessons they teach about innovation, perseverance, and scientific curiosity continue to inspire.
+
+********************************************************************************************************************************************************************************************
+
