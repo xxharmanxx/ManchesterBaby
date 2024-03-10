@@ -1,0 +1,85 @@
+									Project Report: Baby Simulator and Assembler
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+					
+											Overview
+
+This project encompasses the development of a Baby Simulator and an Assembler for simulating the Manchester Baby, one of the earliest computers. The Baby Simulator executes binary machine code, mimicking the fetch-decode-execute cycle of the Manchester Baby. The Assembler translates assembly language into binary machine code compatible with the Baby Simulator. Together, they offer a comprehensive toolset for understanding and experimenting with early computer architecture and programming.
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+											Components
+
+Baby Simulator
+The Baby Simulator is a Java application that simulates the hardware and instruction set of the Manchester Baby. It reads a binary program from a text file, executes the instructions, and displays the state of the hardware at each step.
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+										    Key Features
+
+Memory Extension: Users can specify the memory size, extending the original Manchester Baby's capacity.
+Extended Instruction Set: Includes operations beyond the original Baby's capabilities, such as arithmetic and logical operations.
+Text-based Interface: Displays the program counter, accumulator, and memory state, offering insight into the simulation process.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+										   Implementation
+
+The simulator uses arrays to represent memory and employs integer variables for the program counter (PC) and accumulator (ACC). Instructions are fetched from memory, decoded to determine the operation and operand, and executed accordingly. The state of the simulation is printed to the console after each instruction.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+										    Assembler
+
+The Assembler converts assembly language programs into binary machine code that the Baby Simulator can execute. It supports labels and variables through a symbol table, allowing for readable and maintainable code.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+										Key Features
+
+Symbol Table: Facilitates the use of variable names and labels instead of direct memory addresses.
+
+Error Detection: Identifies syntax errors, undefined symbols, and unsupported instructions, providing meaningful error messages.
+
+Progress Reporting: Informs users about the assembly stages, enhancing the user experience and aiding in debugging.
+
+										Implementation
+
+The Assembler performs two passes over the input program. The first pass builds the symbol table by identifying labels and variables. The second pass translates assembly instructions into binary code, resolving symbols to their corresponding memory addresses. The binary code is then written to a text file.
+
+Example Usage
+Running the Baby Simulator
+
+
+"java BabySimulator exampleProgram.txt 32"
+
+This command runs the Baby Simulator with a specified program and memory size.
+
+Assembling a Program
+
+
+"java Assembler exampleAssemblyProgram.asm outputBinaryProgram.txt"
+
+
+This command uses the Assembler to convert an assembly program into binary machine code.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+								q	   Extensions and Improvements
+
+Immediate Addressing: Introducing immediate addressing could enhance the instruction set's flexibility.
+
+Graphical User Interface (GUI): Developing a GUI would make the simulator more accessible and visually engaging.
+
+Enhanced Error Handling: Implementing more sophisticated error handling would improve usability and robustness.
+Conclusion
+
+The Baby Simulator and Assembler project provides a valuable educational tool for exploring early computer architecture and assembly language programming. By extending the original capabilities of the Manchester Baby, this project not only preserves the historical significance of early computing but also offers a platform for experimentation and learning.
+
+
+
+
+
